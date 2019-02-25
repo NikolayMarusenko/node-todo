@@ -1,0 +1,16 @@
+version: '3'
+services:
+  myapp:
+    container_name: "myapp"
+    image: 1545662258668/node
+    ports:
+      - 8080:8080
+    links:
+      - mongo  
+
+  mongo:
+    image: mongo
+    container_name: "mongo"
+    ports:
+      - 27017:27017
+    
